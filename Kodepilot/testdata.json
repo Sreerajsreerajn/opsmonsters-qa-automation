@@ -1,0 +1,31 @@
+[
+  {
+    "TC_ID": "TC_HP_001",
+    "scenario": "Verify homepage loads successfully",
+    "steps": "Open browser → Enter URL",
+    "url": "https://uat.kodepilot.in",
+    "expected": "Homepage loads without error",
+    "priority": "High"
+  },
+  {
+    "TC_ID": "TC_HP_002",
+    "scenario": "Verify page title",
+    "steps": "Open homepage",
+    "expected": "Title should contain 'KodePilot'",
+    "priority": "Medium"
+  },
+  {
+    "TC_ID": "TC_HP_003",
+    "scenario": "Verify logo visibility",
+    "steps": "Open homepage",
+    "expected": "Logo should be visible",
+    "priority": "High"
+  },
+  {
+    "TC_ID": "TC_HP_004",
+    "scenario": "Verify hero section content",
+    "steps": "Check main banner text",
+    "expected": "'Unlock Your Future' text should display",
+    "priority": "Medium"
+  }
+]

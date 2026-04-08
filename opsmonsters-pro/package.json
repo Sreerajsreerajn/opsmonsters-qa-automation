@@ -1,0 +1,19 @@
+{
+  "name": "opsmonsters-test-suite",
+  "version": "2.0.0",
+  "description": "Production-Grade Automated Testing Suite — OpsMonsters",
+  "scripts": {
+    "test": "node src/runner.js",
+    "test:site": "node src/runner.js --site",
+    "report:pdf": "node src/report-pdf.js",
+    "report:html": "node src/report-html.js",
+    "install:browsers": "npx playwright install chromium",
+    "clean": "node -e \"['screenshots','reports'].forEach(d => { const fs=require('fs'); if(fs.existsSync(d)) fs.rmSync(d,{recursive:true}); fs.mkdirSync(d); })\""
+  },
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "pdfkit": "^0.14.0",
+    "axe-playwright": "^2.0.0",
+    "chalk": "^4.1.2"
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 10,
+    "passes": 3,
+    "pending": 0,
+    "failures": 7,
+    "start": "2026-03-12T18:03:30.304Z",
+    "end": "2026-03-12T18:04:31.807Z",
+    "duration": 61503,
+    "testsRegistered": 10,
+    "passPercent": 30,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0f092ac6-e293-4ace-8fb9-897bcf1ac8f1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\opsmonsters.cy.js",
+      "file": "cypress\\e2e\\opsmonsters.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+          "title": "Opsmonsters Website Full Automation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Header - Logo Visible",
+              "fullTitle": "Opsmonsters Website Full Automation Test Header - Logo Visible",
+              "timedOut": null,
+              "duration": 8639,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('header').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<header.fixed.top-0.left-0.w-full.z-30.backdrop-blur-xl.bg-white/10.border-b.border-white/20>' to be 'visible'\n\nThis element `<header.fixed.top-0.left-0.w-full.z-30.backdrop-blur-xl.bg-white/10.border-b.border-white/20>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"fixed inset-0 z-[10000] flex items-center justify-center px-4\">...</div>`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<header.fixed.top-0.left-0.w-full.z-30.backdrop-blur-xl.bg-white/10.border-b.border-white/20>' to be 'visible'\n\nThis element `<header.fixed.top-0.left-0.w-full.z-30.backdrop-blur-xl.bg-white/10.border-b.border-white/20>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"fixed inset-0 z-[10000] flex items-center justify-center px-4\">...</div>`\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:10:17)",
+                "diff": null
+              },
+              "uuid": "5f528a60-bd8f-49f0-86bb-e030b71c69cf",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Header - Navigation Menu",
+              "fullTitle": "Opsmonsters Website Full Automation Test Header - Navigation Menu",
+              "timedOut": null,
+              "duration": 5805,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Home').should('be.visible');\ncy.contains('About').should('be.visible');\ncy.contains('Services').should('be.visible');\ncy.contains('Contact').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Home' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Home' but never did.\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:14:20)",
+                "diff": null
+              },
+              "uuid": "97a0a2f2-d5af-4b94-b8e1-e7b62c22437e",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Home Page - Banner Section",
+              "fullTitle": "Opsmonsters Website Full Automation Test Home Page - Banner Section",
+              "timedOut": null,
+              "duration": 1647,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section').first().should('be.visible');",
+              "err": {},
+              "uuid": "82394506-cd9a-4d35-8a61-eaecf1d44f9f",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Home Page - Scroll Check",
+              "fullTitle": "Opsmonsters Website Full Automation Test Home Page - Scroll Check",
+              "timedOut": null,
+              "duration": 2533,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\ncy.scrollTo('top');",
+              "err": {},
+              "uuid": "2e7cab36-c7b5-4d7b-8d89-566448965c70",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "About Page Navigation",
+              "fullTitle": "Opsmonsters Website Full Automation Test About Page Navigation",
+              "timedOut": null,
+              "duration": 7644,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('About').click();\ncy.url().should('include', 'about');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"hover:text-primary transition-colors \" href=\"/about\">About</a>`\n\nThis element `<a.hover:text-primary.transition-colors.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"hover:text-primary transition-colors \" href=\"/about\">About</a>`\n\nThis element `<a.hover:text-primary.transition-colors.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153214:58)\n    at Object.isStrictlyVisible (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153228:10)\n    at runAllChecks (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115518:26)\n    at retryActionability (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115586:16)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:152022:68)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:151963:14)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:34:21)",
+                "diff": null
+              },
+              "uuid": "0cbb6fa1-d64e-4271-849e-cfa9f2aee32e",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Services Page Navigation",
+              "fullTitle": "Opsmonsters Website Full Automation Test Services Page Navigation",
+              "timedOut": null,
+              "duration": 6900,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Services').click();\ncy.url().should('include', 'services');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"hover:text-primary transition-colors \" href=\"/services\">Services</a>`\n\nThis element `<a.hover:text-primary.transition-colors.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"hover:text-primary transition-colors \" href=\"/services\">Services</a>`\n\nThis element `<a.hover:text-primary.transition-colors.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153214:58)\n    at Object.isStrictlyVisible (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153228:10)\n    at runAllChecks (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115518:26)\n    at retryActionability (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115586:16)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:152022:68)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:151963:14)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:41:24)",
+                "diff": null
+              },
+              "uuid": "94f1bcaa-18e5-4bff-a665-225d579e0421",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Contact Page Navigation",
+              "fullTitle": "Opsmonsters Website Full Automation Test Contact Page Navigation",
+              "timedOut": null,
+              "duration": 6555,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Contact').click();\ncy.url().should('include', 'contact');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"transition-colors hover:text-primary \" href=\"/contact\">Contact</a>`\n\nThis element `<a.transition-colors.hover:text-primary.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"transition-colors hover:text-primary \" href=\"/contact\">Contact</a>`\n\nThis element `<a.transition-colors.hover:text-primary.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153214:58)\n    at Object.isStrictlyVisible (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153228:10)\n    at runAllChecks (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115518:26)\n    at retryActionability (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115586:16)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:152022:68)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:151963:14)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:48:23)",
+                "diff": null
+              },
+              "uuid": "4b7c8d8d-c54a-4be8-9b08-62c77823153c",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Contact Form Submit",
+              "fullTitle": "Opsmonsters Website Full Automation Test Contact Form Submit",
+              "timedOut": null,
+              "duration": 6456,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Contact').click();\ncy.get('input[name=\"name\"]').type('Automation Test');\ncy.get('input[name=\"email\"]').type('test@gmail.com');\ncy.get('textarea').type('Testing Cypress automation');\ncy.contains('Submit').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"transition-colors hover:text-primary \" href=\"/contact\">Contact</a>`\n\nThis element `<a.transition-colors.hover:text-primary.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"transition-colors hover:text-primary \" href=\"/contact\">Contact</a>`\n\nThis element `<a.transition-colors.hover:text-primary.>` is not visible because its parent `<nav.hidden.z-50.w-full.lg:flex.items-center.justify-between.gap-10.uppercase.tracking-wide.transition-colors.duration-300.text-white>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153214:58)\n    at Object.isStrictlyVisible (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:153228:10)\n    at runAllChecks (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115518:26)\n    at retryActionability (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:115586:16)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:152022:68)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:151963:14)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:56:23)",
+                "diff": null
+              },
+              "uuid": "86a56d5e-0614-470b-82d2-65ecac72181e",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Footer Visibility",
+              "fullTitle": "Opsmonsters Website Full Automation Test Footer Visibility",
+              "timedOut": null,
+              "duration": 1946,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('footer').should('be.visible');",
+              "err": {},
+              "uuid": "1f1d6917-804d-4e79-b542-9a86d5b63012",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Broken Links",
+              "fullTitle": "Opsmonsters Website Full Automation Test Check Broken Links",
+              "timedOut": null,
+              "duration": 12319,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a').each($link => {\n  const url = $link.prop('href');\n  if (url) {\n    cy.request(url);\n  }\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://uat.opsmonsters.com/mailto:consult@opsmonsters.com?subject=Inquiry&body=Hi%20there,\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://uat.opsmonsters.com/mailto:consult@opsmonsters.com?subject=Inquiry&body=Hi%20there,\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Thu, 12 Mar 2026 18:04:33 GMT\",\n  \"content-type\": \"text/html; charset=utf-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"cloudflare\",\n  \"nel\": \"{\\\"report_to\\\":\\\"cf-nel\\\",\\\"success_fraction\\\":0.0,\\\"max_age\\\":604800}\",\n  \"cache-control\": \"private, no-cache, no-store, max-age=0, must-revalidate\",\n  \"vary\": \"rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding\",\n  \"x-nextjs-cache\": \"HIT\",\n  \"x-nextjs-prerender\": \"1\",\n  \"x-nextjs-stale-time\": \"300\",\n  \"x-powered-by\": \"Next.js\",\n  \"report-to\": \"{\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://a.nel.cloudflare.com/report/v4?s=d3TxgpfG%2BzGF3wGNU3AB%2BxedSIgHPVBkBIHO1jlBEaiIqaIAcq9OyJQ4YpwNxCNP0IU9Vx%2F3T%2FAX4PCRUf1E1KVdvlfZneYKuvaFNsWykCOhzJw%3D\\\"}]}\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"content-encoding\": \"gzip\",\n  \"cf-ray\": \"9db4b8d1af125fea-SIN\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: <!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"/><link rel=\"preload\" as=\"image\" href=\"https://workforce.opsmonsters.com/files/opsmonsters-logo-tomato.webp\"/><link rel=\"preload\" as=\"image\" href=\"https://workforce.opsmonsters.com/files/favicon.png\"/><link rel=\"preload\" as=\"image\" href=\"https://cdn.opsmonsters.com/opsmonsters//not_found.svg\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/2473c16c0c2f6b5f.css\" data-precedence=\"next\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/4f7fd7756d10c78f.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/f1b4d49aa9e249c5.js\"/><script src=\"/_next/static/chunks/947d12dbf3547bb5.js\" async=\"\"></script><script src=\"/_next/static/chunks/aee6c7720838f8a2.js\" async=\"\"></script><script src=\"/_next/static/chunks/7d6514a90169e63d.js\" async=\"\"></script><script src=\"/_next/static/chunks/82abf2d65f5428ae.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-e101684e34d9f89e.js\" async=\"\"></script><script src=\"/_next/static/chunks/ff1a16fafef87110.js\" async=\"\"></script><script src=\"/_next/static/chunks/d2be314c3ece3fbe.js\" async=\"\"></script><script src=\"/_next/static/chunks/cb8fa0428216c185.js\" async=\"\"></script><script src=\"/_next/static/chunks/a6ebe17e3f5109fb.js\" async=\"\"></script><script src=\"/_next/static/chunks/c6696aa63b90bc17.js\" async=\"\"></script><script src=\"/_next/static/chunks/1fd990c12f1b0a4a.js\" async=\"\"></script><script src=\"/_next/static/chunks/70ef8fe147d1524e.js\" async=\"\"></script><script src=\"/_next/static/chunks/dd8c7dc827470574.js\" async=\"\"></script><meta name=\"robots\" content=\"noindex\"/><meta name=\"next-size-adjust\" content=\"\"/><title>OpsMonsters</title><meta name=\"description\" content=\"OpsMonsters provides workforce solutions, staffing, and digital transformation services.\"/><meta name=\"application-name\" content=\"OpsMonsters\"/><meta name=\"robots\" c...\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://uat.opsmonsters.com/mailto:consult@opsmonsters.com?subject=Inquiry&body=Hi%20there,\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://uat.opsmonsters.com/mailto:consult@opsmonsters.com?subject=Inquiry&body=Hi%20there,\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Thu, 12 Mar 2026 18:04:33 GMT\",\n  \"content-type\": \"text/html; charset=utf-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"cloudflare\",\n  \"nel\": \"{\\\"report_to\\\":\\\"cf-nel\\\",\\\"success_fraction\\\":0.0,\\\"max_age\\\":604800}\",\n  \"cache-control\": \"private, no-cache, no-store, max-age=0, must-revalidate\",\n  \"vary\": \"rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding\",\n  \"x-nextjs-cache\": \"HIT\",\n  \"x-nextjs-prerender\": \"1\",\n  \"x-nextjs-stale-time\": \"300\",\n  \"x-powered-by\": \"Next.js\",\n  \"report-to\": \"{\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://a.nel.cloudflare.com/report/v4?s=d3TxgpfG%2BzGF3wGNU3AB%2BxedSIgHPVBkBIHO1jlBEaiIqaIAcq9OyJQ4YpwNxCNP0IU9Vx%2F3T%2FAX4PCRUf1E1KVdvlfZneYKuvaFNsWykCOhzJw%3D\\\"}]}\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"content-encoding\": \"gzip\",\n  \"cf-ray\": \"9db4b8d1af125fea-SIN\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: <!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"/><link rel=\"preload\" as=\"image\" href=\"https://workforce.opsmonsters.com/files/opsmonsters-logo-tomato.webp\"/><link rel=\"preload\" as=\"image\" href=\"https://workforce.opsmonsters.com/files/favicon.png\"/><link rel=\"preload\" as=\"image\" href=\"https://cdn.opsmonsters.com/opsmonsters//not_found.svg\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/2473c16c0c2f6b5f.css\" data-precedence=\"next\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/4f7fd7756d10c78f.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/f1b4d49aa9e249c5.js\"/><script src=\"/_next/static/chunks/947d12dbf3547bb5.js\" async=\"\"></script><script src=\"/_next/static/chunks/aee6c7720838f8a2.js\" async=\"\"></script><script src=\"/_next/static/chunks/7d6514a90169e63d.js\" async=\"\"></script><script src=\"/_next/static/chunks/82abf2d65f5428ae.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-e101684e34d9f89e.js\" async=\"\"></script><script src=\"/_next/static/chunks/ff1a16fafef87110.js\" async=\"\"></script><script src=\"/_next/static/chunks/d2be314c3ece3fbe.js\" async=\"\"></script><script src=\"/_next/static/chunks/cb8fa0428216c185.js\" async=\"\"></script><script src=\"/_next/static/chunks/a6ebe17e3f5109fb.js\" async=\"\"></script><script src=\"/_next/static/chunks/c6696aa63b90bc17.js\" async=\"\"></script><script src=\"/_next/static/chunks/1fd990c12f1b0a4a.js\" async=\"\"></script><script src=\"/_next/static/chunks/70ef8fe147d1524e.js\" async=\"\"></script><script src=\"/_next/static/chunks/dd8c7dc827470574.js\" async=\"\"></script><meta name=\"robots\" content=\"noindex\"/><meta name=\"next-size-adjust\" content=\"\"/><title>OpsMonsters</title><meta name=\"description\" content=\"OpsMonsters provides workforce solutions, staffing, and digital transformation services.\"/><meta name=\"application-name\" content=\"OpsMonsters\"/><meta name=\"robots\" c...\n\n\nhttps://on.cypress.io/request\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:136430:72)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:81:3)\n    at Context.callback (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:123041:26)\n    at getRet (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:122806:20)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:4285:29)\n    at thenFn (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:122817:66)\n    at yieldItem (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:123049:16)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Object.gotValue (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:6446:18)",
+                "diff": null
+              },
+              "uuid": "f37871e5-ad08-4f9a-bace-87e0e58daeba",
+              "parentUUID": "bcd22e1b-3f2d-4299-9ee6-adfdb806e3af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82394506-cd9a-4d35-8a61-eaecf1d44f9f",
+            "2e7cab36-c7b5-4d7b-8d89-566448965c70",
+            "1f1d6917-804d-4e79-b542-9a86d5b63012"
+          ],
+          "failures": [
+            "5f528a60-bd8f-49f0-86bb-e030b71c69cf",
+            "97a0a2f2-d5af-4b94-b8e1-e7b62c22437e",
+            "0cbb6fa1-d64e-4271-849e-cfa9f2aee32e",
+            "94f1bcaa-18e5-4bff-a665-225d579e0421",
+            "4b7c8d8d-c54a-4be8-9b08-62c77823153c",
+            "86a56d5e-0614-470b-82d2-65ecac72181e",
+            "f37871e5-ad08-4f9a-bace-87e0e58daeba"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 60444,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

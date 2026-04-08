@@ -1,0 +1,19 @@
+{
+  "name": "opsmonsters-cypress-e2e",
+  "version": "1.0.0",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:report": "cypress run --reporter mochawesome --reporter-options reportDir=mochawesome-report,overwrite=false,html=false,json=true",
+    "cy:mobile": "cypress run --config viewportWidth=375,viewportHeight=812",
+    "cy:desktop": "cypress run --config viewportWidth=1920,viewportHeight=1080"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}

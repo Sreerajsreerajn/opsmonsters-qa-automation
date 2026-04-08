@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-14T07:00:24.630Z",
+    "end": "2026-03-14T07:00:25.229Z",
+    "duration": 599,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "55b79ae9-0d2c-472e-85cd-a00e268a2c7c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\opsmonsters.cy.js",
+      "file": "cypress\\e2e\\opsmonsters.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "25a0889c-a870-41fd-acdd-9e129263bab8",
+          "title": "OpsMonsters.com - Full E2E Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Homepage - Loads correctly + Hero + Key Sections",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Homepage - Loads correctly + Hero + Key Sections",
+              "timedOut": null,
+              "duration": 396,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Title & basic metadata\ncy.title().should('include', 'OpsMonsters');\ncy.get('h1, h2').contains('Operations. Refined. Technology. Humanized.').should('be.visible');\n// Logo\ncy.get('img[alt*=\"OpsMonsters Logo\"]').should('be.visible');\n// Hero CTAs\ncy.contains('button, a', \"See Work\").should('be.visible');\ncy.contains('button, a', \"Let’s Chat\").should('be.visible');\ncy.contains('button, a', \"Let's Create\").should('be.visible');\n// Featured Projects (Blackwell Motors, Hooknest, Links Talent)\ncy.contains('h3, h2', 'Blackwell Morors').should('be.visible');\ncy.contains('a', 'View case study').should('exist');\n// Services section (Generative AI, Quality Assurance, etc.)\ncy.contains('h2', 'Generative AI').should('be.visible');\ncy.contains('h2', 'Quality Assurance').should('be.visible');\n// Process section\ncy.contains('h2', 'We build momentum.').should('be.visible');\ncy.contains('h2', 'Calm execution').should('be.visible');",
+              "err": {
+                "message": "TypeError: cy.injectAxe is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `OpsMonsters.com - Full E2E ...`",
+                "estack": "TypeError: cy.injectAxe is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `OpsMonsters.com - Full E2E ...`\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:11:7)\n    at runnable.fn (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:146599:19)\n    at callFn (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:165733:21)\n    at Runnable.run (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:165720:7)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:171818:30)\n    at PassThroughHandlerContext.finallyHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "c5a0b69b-3a1e-46ec-a38e-a65166769858",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigation - All Menu Items Work (Full Site Coverage)",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Navigation - All Menu Items Work (Full Site Coverage)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const menuItems = [{\n  text: 'About',\n  url: '/about'\n}, {\n  text: 'Services',\n  url: '/services'\n}, {\n  text: 'Careers',\n  url: '/careers'\n}, {\n  text: 'Blogs',\n  url: '/blogs'\n}, {\n  text: 'Contact',\n  url: '/contact'\n}];\nmenuItems.forEach(({\n  text,\n  url\n}) => {\n  cy.contains('a', text).should('be.visible').click({\n    force: true\n  });\n  cy.url().should('include', url);\n  cy.go('back'); // Return to homepage for next test\n});",
+              "err": {},
+              "uuid": "9109ddff-935f-405f-992c-2dbb86a398d0",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Blogs Page - Full Blog Listing Check",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Blogs Page - Full Blog Listing Check",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Blogs').click();\ncy.url().should('include', '/blogs');\n// Verify blog posts (as of March 2026)\ncy.contains('h2, h3', 'Rethinking Product Design with Intelligence').should('be.visible');\ncy.contains('h2, h3', 'Architecture in the digital way').should('be.visible');\ncy.contains('h2, h3', 'How Automative Brands Win Online').should('be.visible');\n// Check read more links work\ncy.contains('a', 'Read More').first().click();\ncy.url().should('include', '/blogs/');\ncy.go('back');",
+              "err": {},
+              "uuid": "da8301a1-18e0-4bf6-9c65-7a98a11cb74f",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Contact Page - Form Existence & Basic Interaction (Smoke Test)",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Contact Page - Form Existence & Basic Interaction (Smoke Test)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Contact').click();\ncy.url().should('include', '/contact');\n// Generic form check (site uses standard form fields)\ncy.get('form').should('exist');\ncy.get('input[type=\"text\"], input[placeholder*=\"Name\"]').should('exist');\ncy.get('input[type=\"email\"]').should('exist');\ncy.get('textarea').should('exist');\ncy.contains('button', 'Send').should('be.visible'); // or \"Submit\" - adjust if needed\n// Optional: Fill & submit demo (intercepts to prevent real email)\ncy.intercept('POST', '**/*contact*').as('submitForm');\ncy.get('input[type=\"email\"]').type('test@opsmonsters.com');\ncy.get('textarea').type('E2E test message from Cypress');\n// cy.contains('button', 'Send').click() // Uncomment only if you want to test submission\n// cy.wait('@submitForm').its('response.statusCode').should('be.oneOf', [200, 204])",
+              "err": {},
+              "uuid": "f62f2040-9d0d-4304-b0cb-af20c30114df",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Footer - All Links & Legal Pages",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Footer - All Links & Legal Pages",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\n// Footer nav\ncy.contains('a', 'HOME').should('be.visible');\ncy.contains('a', 'TERMS AND CONDITIONS').click();\ncy.url().should('include', '/terms-and-conditions');\ncy.go('back');\ncy.contains('a', 'PRIVACY POLICY').click();\ncy.url().should('include', '/privacy-policy');\ncy.go('back');\n// Contact info in footer\ncy.contains('consult@opsmonsters.com').should('be.visible');\ncy.contains('(+91) 99949 53873').should('be.visible');",
+              "err": {},
+              "uuid": "2e310157-4554-4fe1-b6d7-4db7cc62b2d8",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Projects / Services Sub-pages - Quick Smoke (Blackwell Motors example)",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Projects / Services Sub-pages - Quick Smoke (Blackwell Motors example)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${baseUrl}/services/blackwell-motors`);\ncy.contains('Automotive Digital Transformation').should('be.visible');\ncy.contains('React').should('be.visible'); // Tech stack",
+              "err": {},
+              "uuid": "adfb25c2-549d-49ea-893a-057cf3c72b49",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Accessibility - No major violations",
+              "fullTitle": "OpsMonsters.com - Full E2E Testing Accessibility - No major violations",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.checkA11y();",
+              "err": {},
+              "uuid": "316cc4ee-0b9a-40d8-a698-392edd7e5cfa",
+              "parentUUID": "25a0889c-a870-41fd-acdd-9e129263bab8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c5a0b69b-3a1e-46ec-a38e-a65166769858"
+          ],
+          "pending": [],
+          "skipped": [
+            "9109ddff-935f-405f-992c-2dbb86a398d0",
+            "da8301a1-18e0-4bf6-9c65-7a98a11cb74f",
+            "f62f2040-9d0d-4304-b0cb-af20c30114df",
+            "2e310157-4554-4fe1-b6d7-4db7cc62b2d8",
+            "adfb25c2-549d-49ea-893a-057cf3c72b49",
+            "316cc4ee-0b9a-40d8-a698-392edd7e5cfa"
+          ],
+          "duration": 396,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

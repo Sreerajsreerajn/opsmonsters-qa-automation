@@ -1,0 +1,286 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-03-14T06:51:29.281Z",
+    "end": "2026-03-14T06:52:17.438Z",
+    "duration": 48157,
+    "testsRegistered": 10,
+    "passPercent": 10,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 7,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "1ac007e6-e47d-4f37-b5a1-8593aa19f487",
+      "title": "",
+      "fullFile": "cypress\\e2e\\opsmonsters.cy.js",
+      "file": "cypress\\e2e\\opsmonsters.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+          "title": "Opsmonsters Website Full Automation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Header - Logo Visible",
+              "fullTitle": "Opsmonsters Website Full Automation Test Header - Logo Visible",
+              "timedOut": null,
+              "duration": 7955,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('header').should('be.visible');",
+              "err": {},
+              "uuid": "3c573c99-db22-4a48-a0f8-c7239cff9ffe",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Header - Navigation Menu",
+              "fullTitle": "Opsmonsters Website Full Automation Test Header - Navigation Menu",
+              "timedOut": null,
+              "duration": 9444,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Home').should('be.visible');\ncy.contains('About').should('be.visible');\ncy.contains('Services').should('be.visible');\ncy.contains('Contact').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Home' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Home' but never did.\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:28:24)",
+                "diff": null
+              },
+              "uuid": "98e1e01f-b00d-4912-83b3-cfc6e779ea4e",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Home Page - Banner Section",
+              "fullTitle": "Opsmonsters Website Full Automation Test Home Page - Banner Section",
+              "timedOut": null,
+              "duration": 30295,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section').first().should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://uat.opsmonsters.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Opsmonsters Website Full Au...`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://uat.opsmonsters.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Opsmonsters Website Full Au...`\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:135156:74)\n    at visitFailedByErr (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:134730:12)\n    at <unknown> (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:135155:11)\n    at tryCatcher (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://uat.opsmonsters.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/opsmonsters.cy.js:9:7)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:314:117124)\n      at Object.onceWrapper (node:events:633:28)\n      at ClientRequest.emit (node:events:519:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:863:9)\n      at Object.onceWrapper (node:events:633:28)\n      at TLSSocket.emit (node:events:531:35)\n      at Socket._onTimeout (node:net:604:8)\n      at listOnTimeout (node:internal/timers:588:17)\n      at process.processTimers (node:internal/timers:523:7)",
+                "diff": null
+              },
+              "uuid": "361ac856-cf34-4fd2-bf78-114aa4e0bf1c",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Home Page - Scroll Check",
+              "fullTitle": "Opsmonsters Website Full Automation Test Home Page - Scroll Check",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\ncy.scrollTo('top');",
+              "err": {},
+              "uuid": "768715bb-42df-4182-9bf4-a6566269d73e",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "About Page Navigation",
+              "fullTitle": "Opsmonsters Website Full Automation Test About Page Navigation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('About').click({\n  force: true\n});\ncy.url().should('include', 'about');",
+              "err": {},
+              "uuid": "3e5a362e-fbb9-4eda-b014-a5a51f2d3e5f",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Services Page Navigation",
+              "fullTitle": "Opsmonsters Website Full Automation Test Services Page Navigation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Services').click({\n  force: true\n});\ncy.url().should('include', 'services');",
+              "err": {},
+              "uuid": "5e8f9965-0376-4a34-9d64-453ce059bd44",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Contact Page Navigation",
+              "fullTitle": "Opsmonsters Website Full Automation Test Contact Page Navigation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Contact').click({\n  force: true\n});\ncy.url().should('include', 'contact');",
+              "err": {},
+              "uuid": "5fe74e41-ac1d-45d9-8784-2a7abbac9395",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Contact Form Submit",
+              "fullTitle": "Opsmonsters Website Full Automation Test Contact Form Submit",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Contact').click({\n  force: true\n});\ncy.get('input[name=\"name\"]').type('Test User');\ncy.get('input[name=\"email\"]').type('testuser@gmail.com');\ncy.get('textarea').type('Automation testing message');\ncy.get('button[type=\"submit\"]').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "81e09112-d90e-4409-95ab-6a50916960dc",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Footer Visibility",
+              "fullTitle": "Opsmonsters Website Full Automation Test Footer Visibility",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('footer').should('be.visible');",
+              "err": {},
+              "uuid": "4c2d7cf0-9b63-4f4e-a1a5-597f842640fc",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Check Broken Links",
+              "fullTitle": "Opsmonsters Website Full Automation Test Check Broken Links",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a').each($link => {\n  const href = $link.prop('href');\n  if (href && !href.startsWith('mailto:') && !href.startsWith('tel:')) {\n    cy.request({\n      url: href,\n      failOnStatusCode: false\n    });\n  }\n});",
+              "err": {},
+              "uuid": "f90f1528-0ac6-4b69-98b6-6243112295f5",
+              "parentUUID": "5bd022a9-4731-4934-b9d3-d6bba550c2a3",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3c573c99-db22-4a48-a0f8-c7239cff9ffe"
+          ],
+          "failures": [
+            "98e1e01f-b00d-4912-83b3-cfc6e779ea4e",
+            "361ac856-cf34-4fd2-bf78-114aa4e0bf1c"
+          ],
+          "pending": [],
+          "skipped": [
+            "768715bb-42df-4182-9bf4-a6566269d73e",
+            "3e5a362e-fbb9-4eda-b014-a5a51f2d3e5f",
+            "5e8f9965-0376-4a34-9d64-453ce059bd44",
+            "5fe74e41-ac1d-45d9-8784-2a7abbac9395",
+            "81e09112-d90e-4409-95ab-6a50916960dc",
+            "4c2d7cf0-9b63-4f4e-a1a5-597f842640fc",
+            "f90f1528-0ac6-4b69-98b6-6243112295f5"
+          ],
+          "duration": 47694,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "opsmonsters-functional-tester",
+  "version": "1.0.0",
+  "description": "Functional Testing Tool for OpsMonsters UAT",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js",
+    "install-browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "pdfkit": "^0.14.0"
+  }
+}
